@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Редактирование профиля{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            Имя: <br>
+            {{ form.first_name }}<br>
+            <br>
+            Номер телефона:
+            {{ form.phone }}<br>Загрузите фото:<br>
+            {{ form.avatar }}<br>
+            <br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}

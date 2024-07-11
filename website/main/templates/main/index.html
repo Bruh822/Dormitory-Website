@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <div class="home">
+            <h1>Главная страница</h1>
+            <p>Добро пожаловать на сайт 30 общежития! <br> Здесь можно просматривать записи других пользователей, выкладывать свои, просматривать мемы и знакомиться с новостями и всё это абсолютно бесплатно!</p>
+            <a href="{% url 'about' %}"><button class="btn btn-warning">На страницу про нас</button></a>
+        </div>
+    </div>
+{% endblock %}

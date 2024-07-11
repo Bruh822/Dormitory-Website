@@ -1,0 +1,28 @@
+/*Scroll to top button*/
+#scrollTop{
+   display:none;
+  font-size: 100%;
+  right: 10px;
+  bottom: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgb(239, 216, 166);
+  background-color: #ffd29f;
+  color: #ffa646;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+#scrollTop>span {
+  font-size: .8em;
+}
+#scrollTop:hover{
+  background-color: rgb(255, 157%, 87%);
+  transition: 0.5s;
+}
+#scrollTop:active{
+  background-color: rgb(255, 157, 87);
+}
+

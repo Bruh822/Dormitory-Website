@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <div class="publication">
+            <h1>Про нас</h1>
+        <p>Дата создания: 10.05.2022.
+            <a href="{% url 'profile-detail' 1 %}">Мой создатель</a></p>
+        <a class="publication__btn" href="{% url 'post_home' %}"><button class="btn btn-danger">Посмотреть последние публикации</button></a>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2231.3446265178723!2d92.79158271301428!3d55.99538297316815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7ad8edfab5b0d%3A0x38c0194b3a389390!2z0YPQuy4g0JHQvtGA0LjRgdC-0LLQsCwgMywg0JrRgNCw0YHQvdC-0Y_RgNGB0LosINCa0YDQsNGB0L3QvtGP0YDRgdC60LjQuSDQutGA0LDQuSwgNjYwMDc0!5e0!3m2!1sru!2sru!4v1703529239223!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+{% endblock %}

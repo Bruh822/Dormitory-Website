@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Создание поста{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Что нового?</h1>
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            Категория: <br>
+            {{ form.cat }}<br>
+            <br>
+            {{ form.full_text }}<br>Загрузите фото:<br>
+            {{ form.photo }}<br>
+            <br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить пост</button>
+        </form>
+    </div>
+{% endblock %}

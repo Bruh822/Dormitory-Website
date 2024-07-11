@@ -1,0 +1,231 @@
+body {
+    background-color: #141414;
+    color: #f20a0a
+}
+
+aside { /*боковая панель*/
+    float: left; /*позиционирование*/
+    padding: 2.5%; /*внутренний отступ*/
+    color: #fff;
+    border-right: 5px solid #4d4d4d; /*обводка с правого края*/
+    height: 100%; /*высота*/
+    width: 20%; /*ширина*/
+    position: fixed;
+    background: #d6954f;
+    z-index: 100;
+}
+
+aside img { /*картинка на боковой панели*/
+    width: 100%;
+    float: center;
+}
+
+aside h3 { /*заголовки боковой панели*/
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+aside ul {list-style: none} /*список элементов боковой панели*/
+
+aside ul li { /*свойства текста на боковой панели*/
+    color: #f70a0a;
+    display: block;
+    transition: all .6s ease;
+    font-weight: bold
+}
+
+aside ul li:hover, aside ul a:hover { /*эффект увеличения при наведении на элементы боковой панели*/
+    color: #0cf54e;
+    text-decoration: none;
+    transform: scale(1.10);
+}
+
+.publication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__form {
+    margin-left: 0;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration__form {
+    margin-left: 0;
+}
+
+.home {
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__profile {
+    text-align: center;
+}
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 100px;
+    text-align: center;
+    width: 80%;
+    margin-left: 300px;
+    padding: 0px 10px;
+    padding-left: 300px;
+}
+
+main .features h1 {font-size:50px; text-align: center; }
+main .features p {max-width:400px; margin: 20px auto;}
+
+.alert-warning { /*блок с постами*/
+    /*float: center;
+    clear: both;*/
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    margin-left: 40%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+div.article-panel { /*свойства текста в постах*/
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #555;
+    font-weight: bold
+}
+div.article-panel p.first {
+    margin: 0;
+    float: left;
+}
+div.article-panel p.last {
+    margin: 0;
+    float: right;
+}
+img {max-width: 600px; height: auto;}
+
+img.img-article-left {
+	max-width: 300px;
+	height: auto;
+	float: center;
+	padding: 0 10px 10px 0;
+}
+
+img.img-article-left.thumb {
+	max-width: 150px;
+	height: auto;
+}
+.content{
+    border-top: none;
+    min-height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.avatar-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+ul {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+.btn { /*Кнопка "Личный кабинет"*/
+    padding: 0;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media Queries */
+
+/* 992 - 1200 px */
+@media screen and (max-width: 1200px) {
+    main .features {
+        width: 100% !important;
+        padding-left: 220px;
+    }
+
+    .alert {
+        width: 580px;
+    }
+
+    .alert-warning {
+        width: 580px;
+    }
+}
+
+/* 768 - 992 px */
+@media screen and (max-width: 992px) {
+    main .features {
+        padding-left: 155px;
+    }
+    .alert-warning {
+        width: 530px;
+    }
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 768px) {
+    main .features {
+        padding-left: 147px;
+    }
+    .alert-warning {
+        width: 360px;
+    }
+
+    aside {
+        width: 150px;
+    }
+}
+
+/* 320 - 576 px */
+@media screen and (max-width: 576px) {
+    main .features {
+        padding-left: 10px;
+    }
+    .alert-warning {
+        width: 225px;
+    }
+
+    img.img-article-left {
+        max-width: 193px;
+        padding: 0;
+    }
+
+    div.article-panel {
+        display: flex;
+        flex-direction: column;
+    }
+}

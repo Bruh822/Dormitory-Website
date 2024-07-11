@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Посты{% endblock %}
+
+
+{% block content %}
+    <div class="features">
+        {% for el in post %}
+            <div class="alert alert-warning">
+                <div class="article-panel">
+                    <p class="first"><a href="{% url 'profile-detail' el.author.id %}">{{ el.author }}</a></p><br>
+                    <p class="last">Дата: {{el.date|date:"d-m-Y"}}</p>
+	                <p class="first">Категория: {{el.cat}}</p><br>
+                </div>
+                <h2>{{ el.title }}</h2>
+                {% autoescape on %}
+	            {{el.full_text|linebreaks|truncatewords:50}}
+	            {% endautoescape %}
+                {% if el.photo %}
+	            <p><img class="img-article-left" src="{{ el.photo.url }}"></p>
+                {% endif %}<br>
+                <a href="{% url 'post-detail' el.pk %}" class="btn btn-warning">Читать далее...</a>
+                <div style="..."></div>
+<!--                <div class="scroll-top-item" id="scrollTop" title="Вверх"><span>▲</span></div>-->
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
